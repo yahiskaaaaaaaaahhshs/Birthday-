@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffb8d8">
+<title>Only for Pratiti ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ffadd1;--rose:#f15b9e;--lemon:#fff19b;--blue:#aeeaff;--ink:#5b3850;--paper:#fffdf7;--lav:#e8ddff}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Nunito,sans-serif;background:#fff8ec;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer}#app{min-height:100vh;position:relative;isolation:isolate;background:radial-gradient(circle at 10% 8%,#fff 0 3%,transparent 3.5%),linear-gradient(135deg,#fff0f7,#fff8c9 53%,#e8f8ff)}
+#app:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(#fff 1.5px,transparent 1.5px),radial-gradient(#f48bb8 1px,transparent 1px);background-size:48px 48px,75px 75px;background-position:0 0,22px 30px;z-index:-1}
+.page{min-height:100vh;padding:30px 16px 65px;display:flex;align-items:center;justify-content:center}
+.panel{width:min(900px,100%);padding:clamp(24px,5vw,52px);margin:auto;background:#ffffffdf;border:3px solid white;border-radius:34px;box-shadow:0 22px 65px #bd639126;position:relative;backdrop-filter:blur(12px)}
+.panel:before{content:"";position:absolute;inset:9px;border:2px dashed #ffb9d6;border-radius:26px;pointer-events:none}
+.inner{position:relative;z-index:1}.center{text-align:center}.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:1000;color:#d95796}
+h1,h2{font-family:"Baloo 2",sans-serif;line-height:1.03}h1{font-size:clamp(2.7rem,8vw,5.5rem);margin:12px 0;color:#e94e96}h2{font-size:clamp(2rem,5vw,3.4rem);color:#e94e96;margin:12px 0}
+.script{font-family:Pacifico,cursive;color:#ee5d9e}.sub{font-size:1.08rem;line-height:1.8;max-width:670px;margin:0 auto 22px}
+.cat{width:118px;height:100px;margin:0 auto 14px;position:relative;animation:bob 2.6s ease-in-out infinite}
+.cat-face{position:absolute;left:15px;top:20px;width:88px;height:70px;border:3px solid #e8d9dd;background:#fff;border-radius:48% 48% 45% 45%;box-shadow:0 7px 0 #f8dce8}
+.ear{position:absolute;top:5px;width:29px;height:34px;background:#fff;border:3px solid #e8d9dd;transform:rotate(12deg);border-radius:7px 22px 4px 7px}
+.ear.l{left:18px}.ear.r{right:16px;transform:rotate(-12deg)}
+.eye{position:absolute;top:47px;width:6px;height:9px;border-radius:50%;background:#58464e}.eye.l{left:40px}.eye.r{right:39px}
+.nose{position:absolute;left:57px;top:57px;width:9px;height:7px;border-radius:50%;background:#f3c94d}
+.whisk{position:absolute;top:59px;width:22px;height:2px;background:#a99ba1}.whisk.a{left:17px;transform:rotate(9deg)}.whisk.b{left:16px;top:67px;transform:rotate(-8deg)}.whisk.c{right:16px;transform:rotate(-9deg)}.whisk.d{right:16px;top:67px;transform:rotate(8deg)}
+.bow{position:absolute;right:2px;top:7px;width:28px;height:22px;z-index:3}.bow:before,.bow:after{content:"";position:absolute;width:17px;height:20px;background:#ff79b6;border:2px solid #e94e96;border-radius:9px 3px 9px 3px}.bow:before{left:0;transform:rotate(28deg)}.bow:after{right:0;transform:rotate(-28deg)}.bow i{position:absolute;z-index:2;left:11px;top:8px;width:8px;height:8px;background:#ffe36f;border:1px solid #e94e96;border-radius:50%}
+@keyframes bob{50%{transform:translateY(-8px) rotate(2deg)}}
+.btn{border:0;border-radius:999px;padding:14px 25px;font-weight:1000;color:white;background:linear-gradient(100deg,#f15b9e,#fa91bc);box-shadow:0 9px 20px #e65c9b3b;transition:.2s}
+.btn:hover{transform:translateY(-3px)}.btn.blue{background:linear-gradient(100deg,#65c5e9,#9ce5f5);color:#24546b}.btn.yellow{background:linear-gradient(100deg,#f4d94f,#ffe98a);color:#6b5420}
+.field{width:min(390px,100%);display:block;margin:15px auto 8px;border:2px solid #ffc1dc;border-radius:17px;padding:15px;background:#fff;font-weight:900;color:var(--ink);outline:none;text-align:center}
+.field:focus{border-color:#65c6eb;box-shadow:0 0 0 4px #aee8ff65}.hint{font-size:.88rem;color:#987186;margin-bottom:16px}.msg{min-height:26px;font-weight:900;color:#e34d91;margin:8px 0}
+.pill{display:inline-flex;background:var(--lemon);border:1px solid #f4df72;border-radius:999px;padding:8px 15px;font-weight:1000;font-size:.85rem}
+.small{font-size:.84rem;opacity:.72}.note{background:#fff7ce;border:1px solid #f4e28a;border-radius:22px;padding:20px;margin:18px auto;max-width:680px;line-height:1.8}
+.story{background:#fff;border:1px solid #ffd2e5;border-radius:24px;padding:clamp(22px,4vw,38px);box-shadow:0 12px 32px #d26a9b17;text-align:left;line-height:1.95;font-size:1.04rem}.story p{margin:0 0 15px}.story p:last-child{margin:0}
+.story-label{display:inline-block;background:#dff6ff;border-radius:999px;padding:6px 12px;font-size:.78rem;font-weight:1000;color:#377d9c;margin-bottom:14px}
+.nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}.dots{display:flex;gap:7px;justify-content:center;margin:20px 0}.dots i{width:8px;height:8px;border-radius:9px;background:#ffc1dc}.dots i.active{width:23px;background:#ec5a9c}
+.topbar{position:fixed;z-index:5;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;pointer-events:none}.topbar>*{pointer-events:auto}
+.music{border:1px solid #fff;background:#ffffffdf;color:#9e4774;border-radius:999px;padding:9px 13px;font-weight:900;box-shadow:0 4px 14px #a14e7620}
+.progress{height:6px;background:#ffe0ed;border-radius:9px;overflow:hidden;width:min(150px,35vw)}.progress span{display:block;height:100%;width:0;background:#ec5a9c;transition:width .5s}
+.reveal{animation:reveal .65s cubic-bezier(.2,.8,.2,1) both}@keyframes reveal{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.date{font-family:"Baloo 2";font-size:clamp(1.5rem,5vw,2.4rem);font-weight:900;letter-spacing:.1em;color:#5aaed3;background:#e7f8ff;border-radius:18px;padding:12px 20px;display:inline-block}
+.float{position:fixed;z-index:2;pointer-events:none;animation:up 5s linear forwards;font-size:20px}@keyframes up{from{transform:translateY(0);opacity:0}10%{opacity:1}to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(max-width:600px){.page{padding:70px 12px 32px}.panel{border-radius:26px;padding:26px 19px}.story{font-size:1rem}}
+
+/* HELLO KITTY DREAMWORLD OVERRIDE — pink bow, white kitty, lemon & sky-blue details */
+:root{
+ --pink:#ff9fc9;--rose:#ed4f98;--lemon:#fff18a;--blue:#a7e8ff;
+ --ink:#69465b;--paper:#fffdf9;--kitty-red:#f04470;--kitty-white:#fff;
+}
+body{background:#fff4f8}
+#app{
+ background:
+  radial-gradient(ellipse at 8% 12%,#fff 0 5%,transparent 5.5%),
+  radial-gradient(ellipse at 92% 85%,#fff4a9 0 6%,transparent 6.5%),
+  linear-gradient(145deg,#ffe0ef 0%,#fff4a8 48%,#dff6ff 100%);
+}
+#app:before{
+ opacity:.72;
+ background-image:
+  radial-gradient(circle,#fff 2px,transparent 2.8px),
+  radial-gradient(circle,#ff8dbd 1.4px,transparent 2px),
+  radial-gradient(circle,#8cdbf5 1.5px,transparent 2.2px);
+ background-size:34px 34px,57px 57px,83px 83px;
+ background-position:0 0,19px 21px,40px 11px;
+}
+.panel{
+ border:5px solid #fff;
+ border-radius:38px;
+ background:linear-gradient(160deg,#fff 0%,#fffafd 68%,#fff9d9 100%);
+ box-shadow:0 18px 0 #ffb5d2,0 28px 55px #bd63913b;
+}
+.panel:before{inset:10px;border:2px dashed #ff9fc9;border-radius:28px}
+.panel:after{
+ content:"HELLO KITTY ♡";
+ position:absolute;right:22px;top:17px;
+ color:#ed6aa6;background:#fff0f7;border:1px solid #ffc4dd;
+ border-radius:999px;padding:6px 11px;
+ font:900 .62rem Nunito,sans-serif;letter-spacing:.12em;
+ box-shadow:0 3px 0 #ffd3e5;
+}
+.cat{transform:scale(1.16);margin-bottom:22px;filter:drop-shadow(0 5px 0 #ffd5e7)}
+.cat-face{border-color:#d9cbd0;box-shadow:0 7px 0 #f8dce8,0 0 0 5px #fff}
+.bow:before,.bow:after{background:#f04470;border-color:#d92d60}
+.bow i{background:#ffe982;border-color:#d92d60}
+h1{ text-shadow:3px 3px 0 #ffe2ef,6px 6px 0 #fff2a6}
+h2{ text-shadow:2px 2px 0 #ffe5ef}
+.story{
+ border:2px solid #ffc5dc;
+ background:
+  linear-gradient(#fff 0 0) padding-box,
+  linear-gradient(135deg,#ffacd0,#fff09b,#aeeaff) border-box;
+ border-radius:27px;
+ box-shadow:0 8px 0 #ffe0ec,0 15px 30px #d26a9b1a;
+ position:relative;
+}
+.story:before{
+ content:"🎀  ♡  🎀";
+ display:block;text-align:right;color:#ee6aa5;
+ font-size:1rem;letter-spacing:.25em;margin:-5px 0 12px;
+}
+.story-label{background:#fff0f7;border:1px solid #ffc4dd;color:#d84d91}
+.btn{border:2px solid #fff;outline:1px solid #f58ab8;box-shadow:0 6px 0 #d94e91,0 10px 18px #e65c9b30}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #d94e91}
+.btn.blue{box-shadow:0 6px 0 #5baecb,0 10px 18px #65c5e930;outline-color:#78cce9}
+.btn.yellow{box-shadow:0 6px 0 #d5b83c,0 10px 18px #f4d94f30;outline-color:#e6cb56}
+.field{border:2px solid #ffacd0;background:#fffafd;box-shadow:inset 0 2px 5px #f7d9e7}
+.pill{background:linear-gradient(90deg,#fff0a1,#fff8d1);border:1px solid #f1d95c;box-shadow:0 3px 0 #f7e99c}
+.note{background:linear-gradient(135deg,#fff5b9,#fff0f7);border:2px dashed #f3a2c4;box-shadow:0 7px 0 #ffe1ec}
+.music{border:2px solid white;background:#fff0f7;color:#d34c8b;box-shadow:0 4px 0 #ffc3dc}
+.progress{background:#ffe3ee;border:1px solid white;height:8px}
+.progress span{background:linear-gradient(90deg,#f14d99,#ffcf5a,#73d3f1)}
+.date{background:linear-gradient(90deg,#e6f8ff,#fff3a6);border:2px solid white;box-shadow:0 5px 0 #c7edf8}
+.float{filter:drop-shadow(0 2px 2px #e79cbd66)}
+/* Cute sticker-like bows around the page edges */
+#app:after{
+ content:"🎀   ♡   🐱   ♡   🎀";
+ position:fixed;bottom:8px;left:0;right:0;text-align:center;
+ color:#e65a9b;font-size:17px;letter-spacing:.45em;opacity:.72;
+ pointer-events:none;z-index:3;text-shadow:0 2px white;
+}
+@media(max-width:600px){
+ .panel{border-radius:29px;box-shadow:0 12px 0 #ffb5d2,0 22px 42px #bd639126}
+ .panel:after{right:17px;top:14px;font-size:.53rem;padding:5px 8px}
+ .cat{transform:scale(1.05);margin-bottom:16px}
+ #app:after{font-size:13px;letter-spacing:.2em}
+}
+
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="topbar" id="topbar" style="display:none"><button class="music" id="musicBtn">♫ Music: OFF</button><div class="progress"><span id="progressBar"></span></div></div>
+  <main id="stage" class="page">
+    <section class="panel center reveal"><div class="inner">
+      <div class="cat"><div class="ear l"></div><div class="ear r"></div><div class="cat-face"></div><div class="eye l"></div><div class="eye r"></div><div class="nose"></div><div class="whisk a"></div><div class="whisk b"></div><div class="whisk c"></div><div class="whisk d"></div><div class="bow"><i></i></div></div>
+      <div class="kicker">🎀 hello kitty birthday wonderland 🎀</div><h1>Birthday Girl,<br>is this youu???</h1>
+      <p class="sub">A full Hello Kitty pink, lemon-yellow and baby-blue wonderland made for one very special, very tiny, very madarchod human. 🎀🐱💗</p>
+      <div class="pill">🎀 Only one girl gets in 🎀</div>
+      <input class="field" id="entryPass" type="password" placeholder="Please enter key" autocomplete="off">
+      <div class="hint">Hint: <b>Chowk</b></div><div class="msg" id="entryMsg"></div>
+      <button class="btn" id="entryBtn">Open your little world 💗</button><p class="small" style="margin-top:18px">made with a suspicious amount of love ✨</p>
+    </div></section>
+  </main>
+</div>
+<script>
+const stage=document.getElementById('stage'),topbar=document.getElementById('topbar'),musicBtn=document.getElementById('musicBtn');
+let pageIndex=0,audioCtx=null,musicOn=false,musicTimer=null;
+const pages=[
+{label:"the beginning",title:"Who you? My favourite headache 💗",body:[
+"Who youuu?? You're my very achi wali bhadwi didi. A little maaiyaavi creature who has absolutely no idea when the world sleeps or wakes up. Din ho ya raat, madam ka schedule alag hi planet se aata hai.",
+"And somehow, out of all the people in this duniya, I got you. My choti bachi. My laduu. My bestest didi. The same girl who calls me SUAR and madarchod with so much confidence 😭",
+"Pratiti, if somebody had told me that one random person would become such a big part of my everyday life, I probably would've laughed. But look at us now. Tu meri daily routine ka woh part hai jisko skip karne ka option hi nahi hai.",
+"You're not just somebody I talk to when I'm free. You're the person I want to tell things to. Choti si baat ho, koi bakwaas ho, koi tension ho, ya bas mann kar raha ho kisi ko irritate karne ka — my first thought is still you.",
+"Tu meri choti bachi hai, meri laduu hai, meri bhenkilodi hai, meri favourite pagal aurat hai. Aur haan, ye saare titles lifetime ke liye tere naam registered hain."
+]},
+{label:"school enemies",title:"Once upon a school bench…",body:[
+"We actually started as enemies. SCHOOL MEIN. Main teri backchodi karta tha and tu apne attitude ke saath ghoomti thi. Who knew 10th class mein shuru hui ye dosti itni non-breakable ban jayegi?",
+"Pehle bas school ki bakwaas thi, phir baatein badhti gayi. Aur phir 8–9 ghante calls normal ho gayi, 4–5 baje tak chats chalti thi, aur subah aankh khulte hi sabse pehla text ek dusre ko jaata tha.",
+"Ek time tha jab hum ek dusre ko enemy samajhte the. Aur ab haal ye hai ki din bhar baat na ho toh din adhoora sa lagta hai. Kya hi plot twist tha ye, bhagwan ji ne bhi socha hoga in dono ko ek dusre ke sar pe hi chadha dete hain 😭",
+"School ki woh chhoti chhoti baatein, woh random teasing, woh bina wajah tang karna — tab shayad humein idea bhi nahi tha ki ye sab ek din itni special memories ban jayega.",
+"10th mein jo bond start hua tha na, woh sirf school tak rehne wala nahi tha. Woh calls tak aaya, chats tak aaya, late nights tak aaya, aur phir seedha dil ke andar permanent jagah bana gaya.",
+"Main kabhi kabhi sochta hoon ki agar us waqt hum enemies hi rehte toh kitni saari hasi, kitni saari bakwaas aur kitne saare memories miss ho jaate. Thank god hum dono ne dosti kar li, warna meri life ka sabse entertaining character kaise milta?",
+"Tu shayad meri life mein kisi grand entry ke saath nahi aayi thi. Bas dheere dheere aayi, aur phir itni apni ho gayi ki ab alag sochna bhi ajeeb lagta hai."
+]},
+{label:"bunk days & matching allegations",title:"Attendance missing, memories present 😭🎀",body:[
+"Ab school ki attendance ka kya hi bolun 😭 Kabhi TTM bunk karke apni hi duniya mein nikal jaana, cafes ghoomna, kuch khaana peena, aur phir parks mein baith ke ghanton bakwaas karna. Padhai apni jagah aur humari adventures apni jagah.",
+"Those cafe visits were never just about the food. It was the company, the random conversations, the laughing at absolutely nothing, and the feeling that even an ordinary afternoon could turn into a memory because you were there.",
+"Park mein ghoomna, idhar udhar baithna, ek dusre ko tang karna, random photos aur woh endless talks. Kabhi plan hota tha aur kabhi bas nikal padte the. Aur har baar kuch na kuch aisa ho hi jaata tha jo baad mein yaad karke hasi aa jaaye.",
+"Phir aate hain humare couple allegations 😭😭 Bhai hum twinning kya kar lete hain, logon ko lagta hai koi secret scene chal raha hai. Same colours, matching outfits ya bas accidentally same vibe — aur duniya ki detective agency activate ho jaati hai.",
+"Hum dono bas apni bakchodi mein busy hote hain aur log: 'COUPLE HAI KYA?' AREY BHAI HUM TOH SIBLINGS JAISI BONDING WALE NAMOONE HAIN 😭🎀 Lekin allegations sunke hasi bhi utni hi aati hai.",
+"Matching karna bhi ab ek alag hi talent ban gaya hai. Kabhi jaan ke twinning, kabhi bina plan ke same colour, aur phir ek dusre ko dekh ke woh hasi. Honestly, humari coordination kabhi kabhi planned se zyada accidental hoti hai.",
+"School se bunk, cafes, parks, twinning aur couple allegations — ye sab memories meri favourite list mein rahengi. Kyunki jagah koi bhi ho, asli fun toh tere saath hi aata hai meri laduu.",
+"Ek din jab hum ye sab yaad karenge na, toh shayad phir wahi hasi niklegi. Aur tu phir mujhe suar bolegi. Bas isi tarah memories banti rehni chahiye, bhenkilodi 🫂💗"
+]},
+{label:"our everyday",title:"The first text, the last call, the whole day",body:[
+"Subah uthte hi pehla text. Din bhar ki bakwaas. Beech beech mein random calls. Aur phir raat ko pata hi nahi chalta kab 4–5 baj jaate hain. Hamara schedule dekh ke clock bhi confuse ho jaati hogi 😭",
+"8–9 ghante calls koi normal cheez nahi hoti bhai. Lekin humare liye toh ye bhi kam pad jaata tha. Kabhi kuch bolna hota tha, kabhi kuch nahi bolna hota tha, kabhi bas call connected rakhni hoti thi. Teri presence hi kaafi hoti thi.",
+"Kitni baar aisa hua hoga ki hum dono ke paas bolne ko kuch khaas nahi tha, phir bhi call cut karne ka mann nahi karta tha. Kyunki baat sirf conversation ki nahi thi. Baat saath rehne ki thi.",
+"Tu meri daily life ka notification nahi, pura home screen hai. Din start hota hai toh tera khayal, din beech mein hota hai toh tera message, aur din khatam hota hai toh bhi tu hi.",
+"Humari chats mein duniya ka sabse important topic bhi aa sakta hai aur agle hi second sabse stupid joke bhi. Ek minute overthinking, doosre minute hasi. Ek minute serious advice, doosre minute gaaliyon ka exchange 😭",
+"Main shayad har baar bol nahi paata, lekin teri daily presence mere liye bahut matter karti hai. Tera bas ek 'oye' bol dena bhi kabhi kabhi mood theek kar deta hai.",
+"Tu wait karti hai ki main kab tang karunga, aur main wait karta hoon ki kab tujhe tang karne ka mauka milega. Ye hamari friendship ka official full-time job hai."
+]},
+{label:"the pagalpan",title:"A full-time headache 💗",body:[
+"Tu ek number ki bauni, gandmari, bhenkilodi, madarchod aurat hai. Gussa bhi hoti hai, kilasti bhi hai, roti bhi hai, aur kabhi kabhi toh lagta hai tere dimaag mein 47 tabs khule hain aur sab hang ho rakhe hain 😭",
+"Lekin teri har bachkani harkat pyaari hai. Tera muh poora band karke hasna, VC pe mujhe ghurna, aur woh side look… BHAI WOH SIDE LOOK. Haste hue side eyes deti hai na, meri toh wahi melting point ban jaati hai. Killer hai tu, samjhi?",
+"Tu jab gussa hoti hai na toh lagta hai duniya ka sabse bada case chal raha hai. Aur phir thodi der baad khud hi kuch aisa bol deti hai ki mujhe hasi aa jaati hai. Teri narazgi bhi apni hai aur tera manana bhi apna hai.",
+"Tu roti hai toh mujhe genuinely bura lagta hai. Chahe usse pehle hum kitni bhi bakwaas kar rahe ho, chahe main tujhe kitna bhi chida raha hoon, tere aansu dekh ke meri saari comedy side ho jaati hai.",
+"Tu aadhi bhi nahi, puri pagal hai. Kabhi ekdum bachchi, kabhi lecture dene wali didi, kabhi meri therapist, kabhi meri sabse badi dushman. Ek hi insaan mein itne characters kaise hain tere paas?",
+"Your laugh is one of my favourite sounds. Especially jab tu muh band karke hasti hai aur aankhon se sab bol deti hai. Aur jab tu mujhe VC pe ghurti hai, main samajh jaata hoon ki ab ya toh daant padegi ya koi nayi bakwaas shuru hone wali hai.",
+"Tu jitni bhi drama queen ban ja, jitna bhi gussa kar le, mujhe teri ye saari aadatein yaad rahengi. Teri silly si baatein, tere expressions, tera attitude, tera bachpana — sab kuch.",
+"Aur haan, kabhi kabhi tu itni cute harkat kar deti hai ki main tujhe bol bhi nahi paata. Bas sochta hoon ki ye meri bhen itni pyaari kaise ho sakti hai aur agle hi second tu mujhe suar bol deti hai. Balance maintain rehta hai 😭"
+]},
+{label:"our legendary fights",title:"Breakup kar le — meri ex hi bhadwi thi",body:[
+"Aur hamari famous ladai: main bolta hoon tu breakup kar le, aur tu bolti hai meri ex hi bhadwi thi. Matlab duniya ke saare serious topics chhod ke hum dono isi level pe debate karte hain. Kya namoone hain hum 😭",
+"Humari ladai bhi alag level ki hoti hai. Kabhi main kuch bol deta hoon, kabhi tu apni taraf se poora court case khol deti hai. Kabhi dono ek dusre ko samjha rahe hote hain aur kabhi dono ko khud nahi pata hota ki shuru kis baat pe hua tha.",
+"Lekin ek baat hai — humari nok-jhok ke beech bhi ek apnapan rehta hai. Hum ek dusre ko jaante hain. Humein pata hai kaunsi baat pe doosra hasega, kaunsi baat pe gussa hoga, aur kab bas ek simple sa 'chal chup' bolna hai.",
+"Main tujhe bhenkilodi bolta hoon, tu mujhe suar bolti hai. Main tujhe laduu bolta hoon, tu mujhe madarchod bol deti hai. Ye dictionary hum dono ke alawa kisi ko samajh nahi aayegi.",
+"Humare dark jokes, random gaaliyan aur woh inside jokes jo kisi teesre ko explain karne baitho toh aadha ghanta lag jaaye — ye sab humari apni language hai.",
+"Main kabhi nahi chahta ki humari chhoti chhoti fights humare bond se badi ho jaayein. Agar kabhi misunderstanding ho, toh baat karenge. Agar kabhi gussa ho, toh thoda time lenge. Lekin ek dusre ko samajhne ki koshish kabhi band nahi karenge.",
+"Tu meri bestest behen hai. Isliye tere saath hasi bhi real hai, gussa bhi real hai, aur care bhi real hai."
+]},
+{label:"when life got heavy",title:"When nobody else was there",body:[
+"Jab mere saath koi nahi tha, jab ghar pe kalesh hote the, jab main khud ko samajh nahi paata tha, tab tu thi. Tu mujhe sambhalti thi. Tu mujhe sahi aur galat raaste dikhati thi.",
+"Maine apni galti na hone par bhi kai baar galti maani hai, kyunki tune mujhe cheezein samjhaayi hain. Tune mujhe sirf suna nahi, samjha bhi hai. Aur ye cheez main kabhi lightly nahi le sakta.",
+"Jab ghar ki baatein dimaag pe bhaari hoti thi, jab mann mein itni saari cheezein chal rahi hoti thi ki samajh nahi aata tha kisse bolun, tab tu meri baat sunti thi. Kabhi samjhaati thi, kabhi daant deti thi, kabhi bas saath rehti thi.",
+"Tu shayad khud nahi jaanti ki teri kuch simple si baatein kitna farq laati hain. Kabhi tera ek message, kabhi tera call, kabhi tera 'oye kya hua' — ye chhoti cheezein mere liye chhoti nahi hoti.",
+"Tere liye mere dil mein itni respect hai ki kabhi kabhi lagta hai tere pair dhoke paani pila doon. Haan haan, zyada udd mat jaana ab 😭 But seriously, tu mere liye bahut precious hai.",
+"Tu ne mujhe kai baar meri hi soch se bahar nikaala hai. Kabhi mujhe meri galti dikhayi, kabhi mujhe himmat di, kabhi mujhe yaad dilaya ki har cheez ka jawab gusse mein nahi hota.",
+"Main perfect nahi hoon. Kabhi overthink karta hoon, kabhi baat ko zyada kheench deta hoon, kabhi khud hi apne dimaag mein ulajh jaata hoon. Lekin tu ne mujhe better banne ke liye sochna sikhaya.",
+"Thank you for being there on the days when I wasn't easy to handle. Thank you for listening to the same worries more than once. Thank you for not making me feel stupid for having feelings.",
+"Main shayad har baar thank you nahi bolta, kyunki humari bonding mein formal thank you ajeeb lagta hai. Lekin aaj bol raha hoon — thank you meri bachi. Dil se."
+]},
+{label:"the respect you deserve",title:"You're my family, silly",body:[
+"Tu meri real sister nahi hai, lekin tere liye jo respect hai na woh kisi label se chhoti nahi hoti. Mere liye tu meri behen hai. Bas. Is baat pe debate allowed nahi hai.",
+"Main tere liye hamesha achha hi chahta hoon. Teri khushi, tera future, tere dreams, teri peace — sab important hai. Main chahta hoon tu apni life mein woh sab achieve kare jo tu kabhi chupke se sochti hai.",
+"Tu jab apne liye kuch bada imagine kare na, toh khud ko chhota mat samajhna. Tere andar bahut potential hai. Tu jitni pagal hai utni hi capable bhi hai. Apne aap pe bharosa rakhna.",
+"Apne decisions lena, apni pasand ki life banana, galtiyan karna toh unse seekhna, aur kabhi kisi ko apni smile chheen ne mat dena. Teri life teri hai aur tujhe usse khul ke jeena hai.",
+"Main chahta hoon tu hamesha safe rahe, khush rahe, healthy rahe, aur tere aas paas aise log hon jo tujhe samjhein aur teri value karein.",
+"Aur jab kabhi duniya irritating lage, toh yaad rakhna tera ek suar dost hai jo tujhe bina reason tang karne ke liye available rahega. Ye service lifetime free hai 😭"
+]},
+{label:"the lock and key",title:"Exit pe lock laga diya hai 🔒",body:[
+"Mujhe har din lagta hai ki tu kahin nahi jaayegi. Maine toh exit pe lock laga ke chaabi bhi fek di hai. Ab lifetime membership hai teri. No cancellation. No refund. Terms and conditions apply: roz mujhe tang karna compulsory hai.",
+"Agar tu meri life mein nahi hoti na, toh sach mein bahut empty hota. Chand bina roshni ke jaisa. Tu meri life ka woh hissa hai jiske bina sab kuch hote hue bhi kuch missing lagega.",
+"Tu meri life mein sirf ek person nahi, ek habit ban gayi hai. Aisi habit jo boring nahi hoti. Aisi presence jiske saath normal din bhi memory ban jaata hai.",
+"Main nahi jaanta future mein humari life kitni busy ho jaayegi. Ho sakta hai calls kam ho, ho sakta hai chats ka timing badal jaaye, ho sakta hai hum dono apni apni duniya mein busy ho jaayein. Lekin main chahta hoon hum kabhi ek dusre ke liye apnapan khona nahi.",
+"Har din 8 ghante baat ho zaroori nahi. Har waqt online rehna zaroori nahi. Bas jab bhi baat ho, wohi comfort rahe. Wohi hasi rahe. Wohi feeling rahe ki haan, ye meri bhen hai aur main iske saamne bilkul apna ho sakta hoon.",
+"Aur mera promise hai: hamesha tera rahunga, kutiya. Chahe kitne bhi utaar-chadhaav aayein, chahe hum kitna bhi ladein, chahe tu mujhe suar bole ya main tujhe bhenkilodi, main tera Mann rahunga. Tu meri choti bachi rahegi.",
+"Tu mujhe kabhi kabhi pagal kar deti hai, lekin main tujhe replace nahi karna chahta. Har insaan ki apni jagah hoti hai, aur meri life mein teri jagah teri hi rahegi."
+]},
+{label:"your little birthday universe",title:"November wali bachi, this one's yours",body:[
+"19 November. Tera birthday. The day this duniya got one tiny little chaos machine. Aaj ka din sirf cake, gifts aur wishes ka nahi hai. Aaj ka din us insaan ko celebrate karne ka hai jo mere liye itni important ban gayi.",
+"Happy birthday meri choti bachi. I hope you wake up smiling. I hope your day feels warm, loved and special. I hope every little thing you wished for finds its way to you.",
+"I hope this new year of your life brings you confidence when you doubt yourself, courage when things get difficult, calm when your mind gets too loud, and people who love you without making you question your worth.",
+"Main chahta hoon tu itna hase ki teri hasi se tera poora din bhar jaaye. Itni khush rahe ki purani tension chhoti lagne lage. Itni strong bane ki mushkilein tujhe rok na paayein.",
+"Tu jaisi hai na, waise hi rehna. Bas apne dreams poore karna, khud pe bharosa rakhna, aur apni hasi kabhi mat khona. Aur haan, thoda kam barnad hona, kyunki tune sab mujhe hi maan liya hai 😭",
+"May you get the kind of happiness that stays. May you find good things in unexpected places. May you always have a reason to be proud of yourself. And may you never forget how loved you are.",
+"Tu deserve karti hai duniya ki saari achhi cheezein. Aur agar kabhi tujhe lage ki tu enough nahi hai, toh meri taraf se ek zor ka virtual thappad aur ek hug — because tu already bahut hai, samjhi? 🫂"
+]},
+{label:"the promise",title:"Jab tak suraj chand rahega",body:[
+"Jab tak suraj chand rahega, Mann aur Pratiti ka saath rahega. Ye line bas birthday wali line nahi hai. Ye mera promise hai, meri taraf se.",
+"Main promise karta hoon ki teri khushi mein genuinely khush rahunga. Teri achievements pe sabse zyada proud feel karunga. Teri problems mein jitna ho sake saath dunga. Aur jab tu khud pe doubt karegi, main tujhe yaad dilaunga ki tu kitni capable hai.",
+"Main promise karta hoon ki tujhe sirf tab yaad nahi karunga jab mujhe kuch chahiye hoga. Tu meri life ka important hissa hai, aur main chahta hoon tu ye feel kare.",
+"Main promise karta hoon ki humari dosti ko ego se bada rakhne ki koshish karunga. Kabhi meri baat buri lage toh bol dena. Kabhi tujhe meri zaroorat ho toh bula lena. Hum baat karenge, samjhenge, aur phir se hasenge.",
+"Tu meri bestest didi hai. Height mein bhi choti, age mein bhi meri choti bachi, aur harkaton mein toh bilkul nursery ki student 😭 Lekin dil se tu bahut badi hai.",
+"Thank you for choosing to stay in my life. Thank you for being my person. Thank you for making ordinary days feel less ordinary.",
+"Happy birthday, Pratiti. Hamesha khush rehna. Hamesha apni rehna. Aur haan, meri rehna — as my bestest behen, meri laduu, meri choti bachi."
+]},
+{label:"read this slowly",title:"If I could say one thing…",body:[
+"Toh woh ye hota ki tu mere liye bahut matter karti hai. Shayad main mazaak mein chhupa deta hoon, gaali de deta hoon, tujhe chida deta hoon, ya phir kisi random joke mein baat ghuma deta hoon. Lekin us sab ke neeche ek simple si baat hai — I love you, meri behen.",
+"Tu mere liye safe person rahi hai. Tu ne mere bure din dekhe hain, meri overthinking suni hai, meri bakwaas tolerate ki hai, aur phir bhi mujhe apna maana hai. Main ye sab kabhi nahi bhoolunga.",
+"Main chahta hoon tu kabhi apne aap ko akela na samjhe. Tujhe jab bhi baat karni ho, jab bhi rona ho, jab bhi hasna ho, jab bhi bas kisi ko apni random story sunani ho — mujhe yaad kar lena.",
+"Main har problem solve nahi kar sakta, har waqt perfect advice nahi de sakta, lekin main teri baat sun sakta hoon. Tere saath has sakta hoon. Aur tujhe yaad dila sakta hoon ki tu important hai.",
+"Tu meri life mein hoti hai toh mujhe lagta hai mere paas ek apna insaan hai. Ek aisa insaan jiske saath main bilkul stupid ho sakta hoon, bina filter ke bol sakta hoon, aur phir bhi samjha ja sakta hoon.",
+"Bas kabhi apni value kam mat samajhna. Teri jagah koi nahi le sakta. Aur ye koi dramatic birthday line nahi hai. Ye sach hai jo main shayad roz bolta nahi."
+]},
+{label:"one last page",title:"My favourite bhenkilodi",body:[
+"Ab itna sab padh liya hai toh zyada emotional mat ho jaana. Haan ro lena thoda sa, allowed hai. Lekin phir hasna bhi, kyunki mujhe teri hasi bahut pasand hai.",
+"Tu meri choti bachi hai. Meri laduu. Meri maaiyaavi didi. Meri daily dose of pagalpan. Meri bestest behen. Aur meri zindagi ke un logon mein se ek jinke liye main hamesha dil se achha hi chaahunga.",
+"Happy birthday once again, Pratiti. May your life be as bright as lemon yellow, as soft as pink, and as magical as all the little things you love.",
+"Ab jaa cake kha, photos kheench, enjoy kar, aur mujhe update dena. Aur agar tune birthday pe bhi mujhe suar bola na toh bhi theek hai. Aaj tera din hai, extra permission hai 😭",
+"I love you meri bhenkilodi. Hamesha khush reh. Hamesha shine kar. Aur kabhi mat bhoolna — tera Mann idhar hi hai.",
+"Bas ek last baar: Happiesttt birthdayyyyy meri chotiiiiiiii bachi. 🫂🎀💗💛🩵"
+]}
+];
+function render(html){stage.innerHTML=`<section class="panel reveal"><div class="inner">${html}</div></section>`;window.scrollTo({top:0,behavior:'smooth'})}
+async function unlock(stageName,passcode){const r=await fetch('/api/unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({stage:stageName,passcode})});return {ok:r.ok,...await r.json().catch(()=>({}))}}
+document.getElementById('entryBtn').onclick=async()=>{let msg=document.getElementById('entryMsg'),res=await unlock('entry',document.getElementById('entryPass').value);if(!res.ok){msg.textContent=res.message||'Try again 💗';return}success()};
+document.getElementById('entryPass').onkeydown=e=>{if(e.key==='Enter')document.getElementById('entryBtn').click()};
+function success(){render(`<div class="center"><div class="cat"><div class="ear l"></div><div class="ear r"></div><div class="cat-face"></div><div class="eye l"></div><div class="eye r"></div><div class="nose"></div><div class="whisk a"></div><div class="whisk b"></div><div class="whisk c"></div><div class="whisk d"></div><div class="bow"><i></i></div></div><div class="kicker">passcode entered successfully</div><h1>You're eligible<br>to open thiss!</h1><p class="sub">Happiest birthday girlll 💗 Your little world is waiting.</p><button class="btn" id="go">Continue, birthday girl 🎂</button></div>`);document.getElementById('go').onclick=birthday}
+function birthday(){topbar.style.display='flex';render(`<div class="center"><div class="cat"><div class="ear l"></div><div class="ear r"></div><div class="cat-face"></div><div class="eye l"></div><div class="eye r"></div><div class="nose"></div><div class="whisk a"></div><div class="whisk b"></div><div class="whisk c"></div><div class="whisk d"></div><div class="bow"><i></i></div></div><div class="kicker">the day the world got you</div><h1>Happiest birthday,<br><span class="script">Pratiti!</span></h1><div class="date">19 | 11 | 2010</div><h2 style="color:#e9a92e;margin-top:20px">November wali bachi tu OMG 😭</h2><p class="sub">Aaj tera din hai. Nachooooo yayayayaya! Agaya woh din jab tu paida hui thiiii 🎉</p><div class="pill">🎀 my choti bachi · my laduu 🎀</div><div class="nav"><button class="btn yellow" id="birthdayNext">NEXT →</button></div><p class="small">This birthday moment moves on by itself too 💛</p></div>`);document.getElementById('birthdayNext').onclick=beginStory;setTimeout(()=>{if(document.getElementById('birthdayNext'))beginStory()},6000);hearts()}
+function beginStory(){pageIndex=0;story()}
+
+function story(){let p=pages[pageIndex],body=p.body.map(x=>`<p>${x}</p>`).join(''),dots=pages.map((_,i)=>`<i class="${i===pageIndex?'active':''}"></i>`).join('');render(`<div class="center"><span class="story-label">${p.label}</span><div class="kicker">a little story, just for you</div><h2>${p.title}</h2></div><article class="story">${body}</article><div class="dots">${dots}</div><div class="nav">${pageIndex?'<button class="btn blue" id="prev">← Back</button>':''}<button class="btn" id="next">${pageIndex===pages.length-1?'Read my last note 💌':'Next page →'}</button></div><p class="small center" style="margin-top:18px">take your time, bhenkilodi 🫂</p>`);document.getElementById('progressBar').style.width=(pageIndex+1)/pages.length*100+'%';document.getElementById('next').onclick=()=>{if(pageIndex<pages.length-1){pageIndex++;story()}else finalPage()};if(document.getElementById('prev'))document.getElementById('prev').onclick=()=>{pageIndex--;story()}}
+function finalPage(){render(`<div class="center"><div class="cat"><div class="ear l"></div><div class="ear r"></div><div class="cat-face"></div><div class="eye l"></div><div class="eye r"></div><div class="nose"></div><div class="whisk a"></div><div class="whisk b"></div><div class="whisk c"></div><div class="whisk d"></div><div class="bow"><i></i></div></div><div class="kicker">one last thing, my bestest didi</div><h1 class="script">Pratiti…</h1><article class="story"><p>Happy birthday meri choti bachi. I don't think words are enough to explain how much you mean to me. Tu meri real sister nahi hai, lekin tere liye jo pyaar aur respect hai na, woh kisi khoon ke rishte se kam nahi hai.</p><p>School mein enemy banke mile the aur dekh aaj kahan aa gaye. 10th mein shuru hui dosti ne meri life ke itne saare din, raat, calls, chats aur memories apne naam kar liye. Subah ka pehla text, 4–5 baje tak ki chats, 8–9 ghante ki calls — ye sab mere liye sirf timepass nahi tha. Ye meri life ke woh moments hain jinhe main sambhal ke rakhunga.</p><p>Thank you for staying. Thank you for understanding me. Thank you for being my safe place, my daily first text, my call partner, my overthinking listener, and the most pagal person I know.</p><p>Thank you for holding me together when things at home felt heavy. Thank you for showing me right and wrong. Thank you for telling me when I was being stupid. Thank you for being honest with me, even when I needed to hear something difficult.</p><p>I hope you never stop being the silly, dramatic, soft-hearted, angry, laughing, crying, side-eye-giving little human you are. I hope you get everything your heart quietly wishes for. I hope you become everything you dream of becoming.</p><p>Bas khush rehna. Hasti rehna. Apne saare dreams poore karna. Aur kabhi ye mat sochna ki tu akeli hai. Tera ye suar hamesha yahin hai.</p><p>Jab tak suraj chand rahega, Mann aur Pratiti ka saath rahega. Hamesha tera rahunga, kutiya. I love you, my bestest behennnn. 🫂💗</p></article><h2 style="margin-top:26px;color:#e9a92e">Bhadwii khush hojaa 😭</h2><p class="sub">Mere paas shabd nahi the… toh puri website hi bana dali maine.</p><div class="script" style="font-size:2rem">Made with love by Mann 🎀</div><p class="small">Only for Pratiti. Always.</p><button class="btn yellow" id="again">Read it all again ↺</button></div>`);document.getElementById('progressBar').style.width='100%';document.getElementById('again').onclick=()=>{pageIndex=0;story()};hearts()}
+function hearts(){let symbols=['💗','🎀','💛','✨','🩵','🌼'];for(let i=0;i<20;i++)setTimeout(()=>{let el=document.createElement('div');el.className='float';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+'vw';el.style.bottom='-30px';el.style.animationDuration=4+Math.random()*3+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),7500)},i*110)}
+// Original gentle notes made in-browser; tap Music to start because phones require a user gesture.
+function startMusic(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audioCtx=audioCtx||new AC();audioCtx.resume();let notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23],n=0;let play=()=>{if(!musicOn)return;let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=notes[n++%notes.length];g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.03,audioCtx.currentTime+.08);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+1.2);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+1.25)};play();musicTimer=setInterval(play,620)}
+musicBtn.onclick=()=>{musicOn=!musicOn;musicBtn.textContent=musicOn?'♫ Music: ON':'♫ Music: OFF';if(musicOn)startMusic();else{clearInterval(musicTimer);if(audioCtx)audioCtx.suspend()}};
+</script>
+</body></html>
